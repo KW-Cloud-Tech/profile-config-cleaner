@@ -18,5 +18,10 @@ Optional arguments:<br />
 `-o <path-to-output>` or `--output <path-to-output>` (if not defined, creates 'new-conformity-profile.json' in the same directory)  <br />
 
 ### Examples:
-`$ ./profile-config-cleaner.py input-profile.json` - uses the standard values and outputs file to local directory
-`$ ./profile-config-cleaner.py input-profile.json -d default-profile.json -o new-clean-profile.json` - pass in custom files and names
+
+Using the standard values and outputs file to local directory: <br />
+`$ ./profile-config-cleaner.py input-profile.json` 
+
+Passing in custom files and names: <br />
+`$ ./profile-config-cleaner.py input-profile.json -d default-profile.json -o new-clean-profile.json` or <br /> 
+`$ ./profile-config-cleaner.py input-profile.json -default-profile default-profile.json`
