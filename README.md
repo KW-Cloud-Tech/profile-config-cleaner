@@ -9,12 +9,14 @@ Developed using Python 3.8: https://www.python.org/downloads/release/python-380/
 
 ## Usage
 Run from the command line in linux/mac or windows. Must contain the default file and the user's comparison file in the same directory. <br />
+
 First argument (required): <br />
 `<path-to-user-profile>`<br />
+
 Optional arguments:<br />
 `-d <path-to-default-profile>` or `--default-profile <path-to-default-profile>` (if not defined, uses the existing 'conformity-default-profile.json') <br />
 `-o <path-to-output>` or `--output <path-to-output>` (if not defined, creates 'new-conformity-profile.json' in the same directory)  <br />
 
-Examples:
+## Examples:
 `$ ./profile-config-cleaner.py input-profile.json` - uses the standard values and outputs file to local directory
 `$ ./profile-config-cleaner.py input-profile.json -d default-profile.json -o new-clean-profile.json` - pass in custom files and names
