@@ -10,7 +10,7 @@
       "provider": "aws",
       "riskLevel": "MEDIUM",
       "exceptions": {
-        "tags": ["test"],
+        "tags": ["test", "exception"],
         "resources": []
       }
     },
