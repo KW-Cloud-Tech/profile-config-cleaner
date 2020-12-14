@@ -1,0 +1,36 @@
+name: Cloud Conformity Profile Cleanup
+on: 
+  push:
+    paths: myprofile.json
+
+jobs:
+  cleanup:
+    name: Generate Conformity Profile with rules with differ from default profile
+    env:
+      CustomProfile_PATH: myprofile.json
+      OutputProfile_PATH: cleanedprofile.json
+      DefaultProfile_PATH: conformity_default_profile.json
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@master
+        with:
+          python-version: 3.8
+      - name: Run Profile Cleanup Python Script
+        run: |
+          python profile-config-cleaner.py $CustomProfile_PATH -o $OutputProfile_PATH -d $DefaultProfile_PATH
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add $OutputProfile_PATH
+          git commit -m "Conformity Profile Cleanup Action" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
