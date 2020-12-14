@@ -28,6 +28,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add -A
           timestamp=$(date -u)
-          git commit -m "Conformity Profile Cleanup Action ${{ timestamp }}" -a
+          git commit -m "Conformity Profile Cleanup Action ${timestamp}" || exit 0
           git push
 
