@@ -14,8 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
         with:
-          persist-credentials: false
-          fetch-depth: 0
+          fetch-depth: 1
       - name: Set up Python
         uses: actions/setup-python@master
         with:
@@ -25,12 +24,10 @@ jobs:
           python profile-config-cleaner.py $CustomProfile_PATH -o $OutputProfile_PATH -d $DefaultProfile_PATH
       - name: Commit files
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "actions@users.noreply.github.com"
           git config --local user.name "GitHub Action"
-          git add $OutputProfile_PATH
-          git commit -m "Conformity Profile Cleanup Action" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Conformity Profile Cleanup Action ${timestamp}" || exit 0
+          git push
+
