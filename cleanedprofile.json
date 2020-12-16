@@ -13,6 +13,18 @@
         "tags": [],
         "resources": []
       }
+    },
+    {
+      "id": "EC2-002",
+      "enabled": true,
+      "provider": "aws",
+      "riskLevel": "MEDIUM",
+      "exceptions": {
+        "tags": [
+          "exceptions"
+        ],
+        "resources": []
+      }
     }
   ]
 }
