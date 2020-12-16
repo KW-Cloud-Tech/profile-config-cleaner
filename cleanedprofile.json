@@ -1,0 +1,18 @@
+{
+  "schema": "https://cloudconformity.com/external/profile.schema.json",
+  "version": "1.1",
+  "name": "Cloud Conformity default",
+  "description": "This profile contains rules in default settings that are managed by Cloud Conformity. This profile cannot be applied to accounts or uploaded directly to a new or existing profile.",
+  "ruleSettings": [
+    {
+      "id": "EC2-001",
+      "enabled": false,
+      "provider": "aws",
+      "riskLevel": "MEDIUM",
+      "exceptions": {
+        "tags": [],
+        "resources": []
+      }
+    }
+  ]
+}
