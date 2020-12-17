@@ -28,7 +28,7 @@
       "id": "EC2-003",
       "enabled": true,
       "provider": "aws",
-      "riskLevel": "MEDIUM",
+      "riskLevel": "HIGH",
       "exceptions": {
         "tags": [],
         "resources": []
