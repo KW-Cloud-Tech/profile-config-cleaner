@@ -25,6 +25,16 @@
         ],
         "resources": []
       }
+    },
+    {
+      "id": "EC2-003",
+      "enabled": true,
+      "provider": "aws",
+      "riskLevel": "HIGH",
+      "exceptions": {
+        "tags": [],
+        "resources": []
+      }
     }
   ]
 }
