@@ -4,7 +4,7 @@ Parses a Conformity profile JSON file and removes any redundant configurations (
 ## Problem this solves
 Conformity marks all the profile-defined rules as 'manually configured' in the profiles UI. By removing the default rules from the file before upload, users hosting the complete Conformity default profile as a kind of rubrick in version control can improve the UX of managing configured profiles.
 
-## Usage via github
+## Usage via GitHub actions
 The workflows yaml file automatically creates a container and initiates github actions. <br />
 All that is reqired is a merge commit to the user profile file path in the github repository (edit this file path name in the yaml file as desired). This will initiate an action which will run the script and produce the file, which can then be uploaded via the Conformity UI.
 
