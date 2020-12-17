@@ -4,10 +4,13 @@ Parses a Conformity profile JSON file and removes any redundant configurations (
 ## Problem this solves
 Conformity marks all the profile-defined rules as 'manually configured' in the profiles UI. By removing the default rules from the file before upload, users hosting the complete Conformity default profile as a kind of rubrick in version control can improve the UX of managing configured profiles.
 
-## Requires
-Developed using Python 3.8: https://www.python.org/downloads/release/python-380/
+## Usage via github
+The workflows yaml file automatically creates a container and initiates github actions. <br />
+All that is reqired is a merge commit to the user profile file path in the github repository (edit this file path name in the yaml file as desired). This will initiate an action which will run the script and produce the file, which can then be uploaded via the Conformity UI.
 
 ## Usage
+Uses Python 3.8: https://www.python.org/downloads/release/python-380/
+
 Run from the command line in linux/mac or windows. Must contain the default file and the user's comparison file in the same directory. <br />
 
 First argument (required): <br />
