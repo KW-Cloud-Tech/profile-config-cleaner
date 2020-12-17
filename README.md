@@ -8,7 +8,7 @@ Conformity marks all the profile-defined rules as 'manually configured' in the p
 The workflows yaml file automatically creates a container and initiates github actions. <br />
 All that is reqired is a merge commit to the user profile file path in the github repository (edit this file path name in the yaml file as desired). This will initiate an action which will run the script and produce the file, which can then be uploaded via the Conformity UI.
 
-## Usage
+## Offline usage
 Uses Python 3.8: https://www.python.org/downloads/release/python-380/
 
 Run from the command line in linux/mac or windows. Must contain the default file and the user's comparison file in the same directory. <br />
